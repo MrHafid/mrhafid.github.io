@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <title>Note to izull</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.4/dist/sweetalert2.min.css"
+    />
+
+    <style>
+      body {
+        font-family: "Waiting for the Sunrise", cursive;
+        font-size: 30px;
+        margin: 10px 50px;
+        letter-spacing: 6px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="typedtext"></div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.4/dist/sweetalert2.all.min.js"></script>
+
+  <script>
+    // set up text to print, each item in array is new line
+    var aText = new Array(
+      "Hey Kamu iya kamu Izull, terima kasih ya hehe :v",
+      "yahh aku tau sederhana sih tapi ada cinta di dalamnya."
+    );
+    var iSpeed = 100; // time delay of print out
+    var iIndex = 0; // start printing array at this posision
+    var iArrLength = aText[0].length; // the length of the text array
+    var iScrollAt = 20; // start scrolling up at this many lines
+
+    var iTextPos = 0; // initialise text position
+    var sContents = ""; // initialise contents variable
+    var iRow; // initialise current row
+
+    function typewriter() {
+      sContents = " ";
+      iRow = Math.max(0, iIndex - iScrollAt);
+      var destination = document.getElementById("typedtext");
+
+      while (iRow < iIndex) {
+        sContents += aText[iRow++] + "<br />";
+      }
+      destination.innerHTML =
+        sContents + aText[iIndex].substring(0, iTextPos) + "_";
+      if (iTextPos++ == iArrLength) {
+        iTextPos = 0;
+        iIndex++;
+        if (iIndex != aText.length) {
+          iArrLength = aText[iIndex].length;
+          setTimeout("typewriter()", 500);
+        }
+        if (destination.innerHTML.indexOf(".") != -1) {
+          Swal.fire({
+            title: "dudududu",
+            text: "Hey Kamu :v ",
+            imageUrl:
+              "https://raw.githubusercontent.com/MrHafid/mrhafid.github.io/master/IMG_20211229_082421.jpg",
+            imageWidth: 200,
+            imageHeight: 200,
+            imageAlt: "Custom image",
+            allowOutsideClick: false,
+            confirmButtonText: "Lanjut",
+          }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+              Swal.fire({
+                title: "Makasih Yaa &#x2665;",
+                allowOutsideClick: false,
+                confirmButtonText: "Lanjut",
+              }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                  Swal.fire({
+                    title: "Love You &#x2665;",
+                    allowOutsideClick: false,
+                    confirmButtonText: "sudah",
+                  }).then((result) => {
+                    /* Read more about isConfirmed, isDenied below */
+                    if (result.isConfirmed) {
+                      Swal.fire({
+                        position: "top-end",
+                        icon: "info",
+                        title: "Sudahhhhh dadah hehe :v",
+                        showConfirmButton: false,
+                        timer: 1500,
+                      });
+                    } else if (result.isDenied) {
+                      Swal.fire("Yungg", "", "error");
+                    }
+                  });
+                } else if (result.isDenied) {
+                  Swal.fire("Yungg", "", "error");
+                }
+              });
+            } else if (result.isDenied) {
+              Swal.fire("Yungg", "", "error");
+            }
+          });
+        }
+      } else {
+        setTimeout("typewriter()", iSpeed);
+      }
+    }
+
+    typewriter();
+  </script>
+</html>
