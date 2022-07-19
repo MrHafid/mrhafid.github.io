@@ -1,9 +1,9 @@
-## LinkTree : 
+## This Me Personal Link Tree : 
 
-### Design and Coded by Sm8uti.
+### Design and Coded by Achmad Hafid Supriyadi.
 
-### Demo : [link](https://sm8uti-linktree.netlify.app/)
+### Demo : [link]([https://sm8uti-linktree.netlify.app/](https://mrhafid.github.io/thisMe/))
 
 ## Screenshot :
 
-<img src="screenshot.png">
+<img src="image.png">
