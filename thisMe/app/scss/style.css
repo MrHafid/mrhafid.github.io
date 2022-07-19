@@ -84,7 +84,7 @@ header nav .right a:hover {
 
 .main-text h1 {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: -10%;
   color: var(--secondarycolor);
   font-size: 13rem;
