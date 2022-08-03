@@ -12,16 +12,6 @@
         <link rel="manifest" href="./manifest.json">
 
         <title>Responsive bottom navigation</title>
-
-        <script>
-            // Check that service workers are supported
-            if ("serviceWorker" in navigator) {
-              // Use the window load event to keep the page load performant
-              window.addEventListener("load", () => {
-                navigator.serviceWorker.register("./sw.js");
-              });
-            }
-            </script>
             
     </head>
     <body>
@@ -103,5 +93,14 @@
 
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
+          <script>
+            // Check that service workers are supported
+            if ("serviceWorker" in navigator) {
+              // Use the window load event to keep the page load performant
+              window.addEventListener("load", () => {
+                navigator.serviceWorker.register("./sw.js");
+              });
+            }
+         </script>
     </body>
 </html>
