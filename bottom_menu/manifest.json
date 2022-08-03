@@ -1,0 +1,34 @@
+{
+    "name": "Bottom Menu Tes",
+    "short_name": "BM Tes",
+    "icons": [
+      {
+        "src": "./assets/img/perfil.png",
+        "sizes": "100x100",
+        "type": "image/png"
+       
+      },
+      {
+        "src": "./assets/img/perfil.png",
+        "sizes": "150x150",
+        "type": "image/png"
+        
+      },
+      {
+        "src": "./assets/img/perfil.png",
+        "sizes": "250x250",
+        "type": "image/png"
+      },
+      {
+        "src": "./assets/img/perfil.png",
+        "sizes": "500x500",
+        "type": "image/png"
+    
+      }
+    ],
+    "theme_color": "#FFFFFF",
+    "background_color": "#FFFFFF",
+    "start_url": "/bottom_menu/",
+    "display": "standalone",
+    "orientation": "portrait"
+  }
