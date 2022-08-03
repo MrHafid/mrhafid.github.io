@@ -1,8 +1,8 @@
 const CACHE_NAME = 'CACHE-01';
 const toCache = [
     '/',
-    'manifest.json',
-    'register.js',
+    './manifest.json',
+    './register.js',
     'assets/img/perfil.png',
 ];
 
